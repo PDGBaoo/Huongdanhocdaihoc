@@ -1,1 +1,129 @@
-# Huongdanhocdaihoc
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phương pháp học tập hiệu quả ở môi trường đại học</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f8fb;--card:#fff;--tx:#1d2733;--mut:#5d6b7a;--pri:#2563eb;--pri2:#dbe7ff;--bd:#e1e7ef;--ok:#16a34a;--g2:#7c3aed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1720;--card:#18222e;--tx:#e8eef5;--mut:#9aa8b8;--pri:#6ea0ff;--pri2:#1e2f4d;--bd:#2a3746;--ok:#4ade80;--g2:#a78bfa}}
+:root[data-theme="dark"]{--bg:#0f1720;--card:#18222e;--tx:#e8eef5;--mut:#9aa8b8;--pri:#6ea0ff;--pri2:#1e2f4d;--bd:#2a3746;--ok:#4ade80;--g2:#a78bfa}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:10px;padding:10px 16px}
+header b{flex:1}
+.prog{position:absolute;left:0;bottom:-1px;height:3px;background:linear-gradient(90deg,var(--pri),var(--g2));transition:width .5s}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;padding:8px 14px;transition:transform .15s,box-shadow .2s}
+button:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(37,99,235,.18)}
+button:active{transform:scale(.96)}
+button.p{background:var(--pri);color:#fff;border-color:var(--pri)}
+.wrap{display:flex;max-width:1100px;margin:0 auto}
+nav{width:270px;flex:none;padding:16px;position:sticky;top:60px;align-self:flex-start;max-height:calc(100vh - 60px);overflow:auto}
+nav a{display:block;padding:7px 10px;border-radius:8px;color:var(--mut);text-decoration:none;font-size:14.5px;transition:background .2s,transform .2s}
+nav a:hover{background:var(--pri2);transform:translateX(4px)}
+nav a.on{background:var(--pri2);color:var(--pri);font-weight:600}
+main{flex:1;min-width:0;padding:24px 20px 60px;animation:pg .5s ease both}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;margin:16px 0;transition:transform .25s,box-shadow .25s;animation:up .6s ease both}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(37,99,235,.14)}
+main>*:nth-child(2){animation-delay:.05s}.card:nth-of-type(2){animation-delay:.12s}.card:nth-of-type(3){animation-delay:.2s}.card:nth-of-type(4){animation-delay:.28s}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px}h2{font-size:21px;margin:22px 0 6px}
+.lead{color:var(--mut);font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.grid .card{margin:0}
+.grid .card:nth-child(2){animation-delay:.1s}.grid .card:nth-child(3){animation-delay:.2s}.grid .card:nth-child(4){animation-delay:.3s}.grid .card:nth-child(5){animation-delay:.4s}
+.bar{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:14.5px}
+.bar span:first-child{width:46%}.bar i{display:block;height:14px;width:var(--w);background:linear-gradient(90deg,var(--pri),var(--g2));border-radius:7px;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
+.bar div{flex:1;background:var(--pri2);border-radius:7px}
+.note{font-size:13.5px;color:var(--mut);border-left:3px solid var(--pri);padding:4px 10px;margin:12px 0}
+.timer{font-size:64px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
+.timer.go{animation:pulse 1s infinite;color:var(--pri)}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px 0}
+input,textarea{font:inherit;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:8px;width:100%;transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px var(--pri2)}
+.cornell{display:grid;grid-template-columns:1fr 2fr;gap:8px}.cornell .sum{grid-column:1/3}
+.fc{min-height:120px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:18px;cursor:pointer;background:var(--pri2);border-radius:12px;padding:16px;user-select:none}
+.fc.fl{animation:flip .45s ease}
+.todo{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--bd);animation:up .3s ease both}.todo input{width:auto}.todo s{color:var(--mut)}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:28px}
+blockquote{margin:10px 0;padding:10px 14px;background:var(--pri2);border-radius:10px}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--bd);padding:8px;text-align:left;vertical-align:top}
+tr{transition:background .2s}tr:hover td{background:var(--pri2)}
+.tw{overflow-x:auto}
+/* banner & hero */
+.ban{position:relative;overflow:hidden;height:140px;border-radius:16px;margin:0 0 18px;background:linear-gradient(135deg,var(--pri),var(--g2));display:flex;align-items:center;justify-content:center;gap:18px;font-size:64px;animation:up .6s ease both}
+.ban:before,.ban:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.14);animation:fl 7s ease-in-out infinite}
+.ban:before{width:160px;height:160px;left:-40px;top:-60px}.ban:after{width:110px;height:110px;right:8%;bottom:-50px;animation-delay:-3s}
+.ban span{position:relative;z-index:1;animation:fl 4s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.ban span:nth-child(2){animation-delay:-1.3s;font-size:80px}.ban span:nth-child(3){animation-delay:-2.6s}
+.hero{margin:0 0 18px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,var(--pri2),var(--card));border:1px solid var(--bd)}
+.hero svg{display:block;width:100%;height:auto;max-height:260px}
+.fl{animation:fl 4s ease-in-out infinite}.fl2{animation:fl 5s ease-in-out -2s infinite}.sp{animation:tw 2.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.cf{position:fixed;top:-30px;z-index:20;font-size:24px;pointer-events:none;animation:cf 2.4s linear forwards}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes pg{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{width:0}}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes tw{0%,100%{opacity:.3;transform:scale(.6)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes pulse{50%{transform:scale(1.04)}}
+@keyframes flip{from{transform:rotateX(90deg);opacity:.2}to{transform:none;opacity:1}}
+@keyframes cf{to{transform:translateY(110vh) rotate(540deg)}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+#mb{display:none}
+@media(max-width:800px){#mb{display:block}nav{display:none;position:fixed;inset:56px 0 0 0;width:auto;max-height:none;background:var(--card);z-index:4}nav.open{display:block}.cornell{grid-template-columns:1fr}.cornell .sum{grid-column:1}.timer{font-size:52px}.ban{font-size:48px;height:110px}.ban span:nth-child(2){font-size:60px}}
+</style>
+</head>
+<body>
+<header><button id="mb" onclick="document.querySelector('nav').classList.toggle('open')">☰</button><b>📚 Học đại học hiệu quả</b><button onclick="tg()">🌓</button><div class="prog" id="pg"></div></header>
+<div class="wrap"><nav id="nav"></nav><main id="m"></main></div>
+<script>
+var T=null;
+function tg(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'}
+function bars(a){return a.map(function(x){return '<div class="bar"><span>'+x[0]+'</span><div><i style="--w:'+x[1]+'%"></i></div><span>'+x[1]+'%</span></div>'}).join('')}
+var DEMO='<div class="note">Số liệu minh họa. Hãy thay bằng kết quả khảo sát thật của nhóm (sửa trong mã nguồn của trang).</div>';
+var HERO='<div class="hero"><svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" aria-label="Minh họa học tập"><circle cx="80" cy="60" r="3" fill="#f59e0b" class="sp"/><circle cx="610" cy="50" r="4" fill="#f59e0b" class="sp" style="animation-delay:-.7s"/><circle cx="520" cy="200" r="3" fill="#2563eb" class="sp" style="animation-delay:-1.4s"/><circle cx="170" cy="210" r="4" fill="#7c3aed" class="sp" style="animation-delay:-.4s"/><g class="fl2"><circle cx="150" cy="120" r="34" fill="#fde68a"/><rect x="138" y="150" width="24" height="14" rx="3" fill="#94a3b8"/><path d="M150 100v22M140 112l10 10 10-10" stroke="#b45309" stroke-width="4" fill="none" stroke-linecap="round"/></g><g><path d="M350 200c-40-22-90-22-130-4v-92c40-18 90-18 130 4z" fill="#2563eb"/><path d="M350 200c40-22 90-22 130-4v-92c-40-18-90-18-130 4z" fill="#60a5fa"/><path d="M350 112v88" stroke="#1e3a8a" stroke-width="3"/><path d="M240 124c30-9 66-8 96 4M240 144c30-9 66-8 96 4M240 164c30-9 66-8 96 4" stroke="#fff" stroke-width="3" opacity=".6" fill="none" stroke-linecap="round"/><path d="M364 128c30-12 66-13 96-4M364 148c30-12 66-13 96-4" stroke="#fff" stroke-width="3" opacity=".6" fill="none" stroke-linecap="round"/></g><g class="fl"><path d="M560 190l-26-50 26-62 26 62z" fill="#f43f5e"/><circle cx="560" cy="120" r="10" fill="#fff"/><path d="M534 140l-18 24 22-6zM586 140l18 24-22-6z" fill="#7c3aed"/><path d="M552 190q8 28 16 0" fill="#f59e0b"/></g></svg></div>';
+var IC={intro:['🎓','🚪'],diff:['🏫','➡️','🎓'],tt1:['📋','📊'],tt2:['⏳','📖','📊'],tt3:['🔍','📈'],kk:['🧗','💭'],pp1:['📅','✅','🎯'],pp2:['🍅','⏱','🔥'],pp3:['📝','✏️','📓'],pp4:['🃏','🧠','💡'],pp5:['🗓','🔁','🌱'],pp6:['🗣','👥','💬'],phone:['📱','🔕','🌿'],sv:['🧑‍🎓','💬'],gv:['👩‍🏫','💬'],kl:['🏆','🌟','🚀'],about:['👥','📚']};
+function ban(id){var a=IC[id];return a?'<div class="ban">'+a.map(function(e){return '<span>'+e+'</span>'}).join('')+'</div>':''}
+var P=[
+{id:'home',t:'Trang chủ',h:function(){return HERO+'<h1>Học đại học hiệu quả: từ biết đến làm được</h1><p class="lead">Hướng dẫn dành cho sinh viên năm nhất: hiểu môi trường mới, nhận ra khó khăn và áp dụng 6 phương pháp học đã được nghiên cứu chứng minh.</p><div class="grid"><div class="card"><b>🧭 Hiểu vấn đề</b><br>Đại học khác phổ thông ở đâu, sinh viên thường vướng gì.</div><div class="card"><b>🛠 6 phương pháp</b><br>Kế hoạch, Pomodoro, Cornell, tự kiểm tra, ôn ngắt quãng, Feynman.</div><div class="card"><b>📱 Tập trung</b><br>Làm chủ điện thoại để không bị cuốn đi.</div></div><div class="card"><b>Bắt đầu từ đâu?</b><br>Đọc theo thứ tự từ “Mở đầu”, hoặc nhảy thẳng tới công cụ: <a href="#/pp1">Lập kế hoạch</a>, <a href="#/pp2">Pomodoro</a>, <a href="#/pp4">Thẻ tự kiểm tra</a>, <a href="#/pp5">Lịch ôn tập</a>.</div>'}},
+{id:'intro',t:'Mở đầu',h:function(){return '<h1>Mở đầu</h1><p>Nhiều bạn vào đại học với thói quen học của phổ thông: thầy cô nhắc bài, kiểm tra đều đặn, lịch học kín. Lên đại học, mọi thứ thay đổi: bạn tự quyết định học khi nào, học gì, học bao nhiêu.</p><p>Sự tự do đó là cơ hội, nhưng cũng là lý do nhiều sinh viên chật vật ở học kỳ đầu. Vấn đề thường không nằm ở năng lực mà ở <b>phương pháp</b> và <b>thói quen</b>.</p><div class="card"><b>Mục tiêu của trang này</b><ul><li>Giúp bạn hiểu mình đang ở đâu so với thực trạng chung.</li><li>Cung cấp 6 phương pháp học cụ thể, có công cụ thực hành ngay.</li><li>Gợi ý cách giữ tập trung trong thời đại điện thoại thông minh.</li></ul></div>'}},
+{id:'diff',t:'Học đại học khác phổ thông thế nào?',h:function(){return '<h1>Học đại học khác phổ thông thế nào?</h1><div class="card tw"><table><tr><th>Tiêu chí</th><th>Phổ thông</th><th>Đại học</th></tr><tr><td>Quản lý thời gian</td><td>Lịch cố định, có người nhắc</td><td>Tự sắp xếp, ít ai nhắc</td></tr><tr><td>Cách dạy</td><td>Giảng và chữa bài chi tiết</td><td>Giảng viên định hướng, sinh viên tự đọc, tự nghiên cứu</td></tr><tr><td>Khối lượng kiến thức</td><td>Vừa phải, lặp lại nhiều</td><td>Lớn, nhanh, ít lặp lại</td></tr><tr><td>Đánh giá</td><td>Kiểm tra thường xuyên</td><td>Dồn vào giữa kỳ, cuối kỳ, đồ án, thuyết trình</td></tr><tr><td>Trách nhiệm</td><td>Chia sẻ với thầy cô, gia đình</td><td>Chủ yếu thuộc về sinh viên</td></tr></table></div><blockquote>Thay đổi cốt lõi: từ “được dẫn dắt” sang “tự chủ”. Học tự chủ cần kỹ năng, và kỹ năng thì rèn được.</blockquote>'}},
+{id:'tt1',t:'Thực trạng (1): về khảo sát',h:function(){return '<h1>Thực trạng (1): về khảo sát</h1><p>Nhóm khảo sát sinh viên năm nhất về cảm nhận khi chuyển từ phổ thông lên đại học.</p>'+DEMO+'<div class="card"><b>Thông tin mẫu</b><ul><li>Đối tượng: sinh viên năm 1–2</li><li>Số phiếu: [điền số phiếu]</li><li>Hình thức: biểu mẫu trực tuyến</li></ul></div><div class="card"><b>Bạn cảm thấy thế nào ở học kỳ đầu?</b>'+bars([['Bỡ ngỡ, chưa quen cách học',62],['Áp lực về khối lượng bài',55],['Khó giữ động lực',48],['Thích nghi tốt',23]])+'</div>'}},
+{id:'tt2',t:'Thực trạng (2): thời gian và cách học',h:function(){return '<h1>Thực trạng (2): thời gian và cách học</h1>'+DEMO+'<div class="card"><b>Cách học phổ biến</b>'+bars([['Đọc lại ghi chép, giáo trình',71],['Gạch chân, tô màu',58],['Học dồn trước kỳ thi',64],['Tự làm câu hỏi kiểm tra',22],['Ôn ngắt quãng',12]])+'</div><div class="card"><b>Thời gian tự học mỗi ngày</b>'+bars([['Dưới 1 giờ',34],['1–2 giờ',41],['Trên 2 giờ',25]])+'</div><p>Điểm đáng chú ý: các cách học được dùng nhiều nhất (đọc lại, gạch chân) lại thuộc nhóm ít hiệu quả theo nghiên cứu, còn các cách hiệu quả (tự kiểm tra, ôn ngắt quãng) ít người dùng.</p>'}},
+{id:'tt3',t:'Thực trạng (3): đánh giá hiệu quả',h:function(){return '<h1>Thực trạng (3): đánh giá hiệu quả</h1>'+DEMO+'<div class="card"><b>Bạn tự đánh giá hiệu quả học của mình?</b>'+bars([['Rất hiệu quả',8],['Khá hiệu quả',32],['Trung bình',41],['Chưa hiệu quả',19]])+'</div><p>Phần lớn sinh viên đánh giá mình ở mức trung bình trở xuống, và nhiều bạn không chắc nguyên nhân nằm ở đâu. Điều này cho thấy nhu cầu rõ ràng về một hướng dẫn phương pháp cụ thể.</p><div class="note">Gợi ý nghiên cứu: Dunlosky và cộng sự (2013) đánh giá 10 kỹ thuật học; tự kiểm tra và ôn ngắt quãng được xếp hiệu quả cao, còn gạch chân và đọc lại được xếp hiệu quả thấp.</div>'}},
+{id:'kk',t:'Khó khăn của sinh viên',h:function(){return '<h1>Khó khăn của sinh viên</h1><div class="grid"><div class="card"><b>⏰ Quản lý thời gian</b><br>Không biết ưu tiên, hay trì hoãn.</div><div class="card"><b>📖 Phương pháp học</b><br>Học thuộc lòng, chưa biết cách hiểu sâu.</div><div class="card"><b>📱 Mất tập trung</b><br>Mạng xã hội, game, thông báo liên tục.</div><div class="card"><b>🔥 Áp lực và động lực</b><br>So sánh với bạn bè, mất định hướng.</div><div class="card"><b>🏠 Thích nghi môi trường</b><br>Xa nhà, đi làm thêm, ít người đồng hành.</div></div><p>Hầu hết các khó khăn này giải quyết được bằng thói quen nhỏ lặp lại đều đặn. Các phần sau sẽ đi từng bước.</p>'}},
+{id:'pp1',t:'Phương pháp 1: Lập kế hoạch học tập',h:function(){return '<h1>Phương pháp 1: Lập kế hoạch học tập</h1><p>Kế hoạch tốt thì nhỏ, cụ thể và đo được. Thay vì “học Giải tích”, hãy viết “làm 5 bài tích phân, 19h–20h”.</p><ol><li>Cuối tuần, liệt kê deadline và kỳ thi.</li><li>Chia mỗi mục thành việc nhỏ dưới 90 phút.</li><li>Xếp việc khó vào khung giờ tỉnh táo nhất.</li><li>Chừa 20% thời gian trống cho việc phát sinh.</li></ol><div class="card"><b>✅ Công cụ: danh sách việc hôm nay</b><div class="row"><input id="ti" placeholder="Việc cần làm..." style="flex:1;min-width:160px"><button class="p" onclick="addT()">Thêm</button></div><div id="tl"></div></div>'},i:function(){TD=[];rT()}},
+{id:'pp2',t:'Phương pháp 2: Pomodoro',h:function(){return '<h1>Phương pháp 2: Pomodoro</h1><p>Học tập trung 25 phút, nghỉ 5 phút. Sau 4 chu kỳ, nghỉ dài 15–30 phút. Giới hạn thời gian giúp bạn dễ bắt đầu và giữ sự tập trung.</p><div class="card"><div class="row"><button onclick="setT(25)">Học 25’</button><button onclick="setT(5)">Nghỉ 5’</button><button onclick="setT(15)">Nghỉ dài 15’</button></div><div class="timer" id="tm">25:00</div><div class="row"><button class="p" onclick="runT()">Bắt đầu / Tạm dừng</button><button onclick="setT(cur)">Đặt lại</button></div><p style="text-align:center" id="tc">Số chu kỳ hoàn thành: 0</p></div><div class="note">Trong lúc học: để điện thoại xa tầm tay, ghi lại điều gì chợt nảy ra để xử lý sau giờ nghỉ.</div>'},i:function(){cur=25;left=1500;done=0;run=false;dT()}},
+{id:'pp3',t:'Phương pháp 3: Ghi chú Cornell',h:function(){return '<h1>Phương pháp 3: Ghi chú Cornell</h1><p>Chia trang giấy thành 3 vùng: <b>ghi chú</b> (bên phải, ghi khi nghe giảng), <b>gợi ý</b> (bên trái, từ khóa/câu hỏi viết sau buổi học) và <b>tóm tắt</b> (dưới cùng, 2–3 câu bằng lời của bạn). Dùng vùng gợi ý để tự kiểm tra khi ôn.</p><div class="card"><div class="cornell"><div><b>Gợi ý / câu hỏi</b><textarea rows="9" placeholder="Từ khóa, câu hỏi..."></textarea></div><div><b>Ghi chú bài giảng</b><textarea rows="9" placeholder="Ghi ý chính khi nghe giảng..."></textarea></div><div class="sum"><b>Tóm tắt</b><textarea rows="3" placeholder="Tóm tắt bằng lời của bạn..."></textarea></div></div></div>'}},
+{id:'pp4',t:'Phương pháp 4: Tự kiểm tra (Active recall)',h:function(){return '<h1>Phương pháp 4: Tự kiểm tra</h1><p>Thay vì đọc lại, hãy <b>đóng sách và cố nhớ</b>. Nỗ lực truy xuất thông tin khỏi trí nhớ làm trí nhớ bền hơn (hiệu ứng kiểm tra, Roediger và Karpicke, 2006).</p><div class="card"><b>🃏 Thẻ ghi nhớ: bấm vào thẻ để lật</b><div class="fc" id="fc" onclick="flip()"></div><div class="row"><button onclick="nx(-1)">← Trước</button><span id="fn"></span><button onclick="nx(1)">Sau →</button></div></div><p>Cách làm: biến mỗi đề mục thành câu hỏi, trả lời không nhìn tài liệu, rồi đối chiếu.</p>'},i:function(){fi=0;fb=false;sF()}},
+{id:'pp5',t:'Phương pháp 5: Ôn tập ngắt quãng',h:function(){return '<h1>Phương pháp 5: Ôn tập ngắt quãng</h1><p>Theo đường cong lãng quên của Ebbinghaus, ta quên nhanh nếu không ôn lại. Ôn đúng lúc sắp quên sẽ giúp nhớ lâu. Mốc phổ biến: sau 1, 3, 7, 14 và 30 ngày.</p><div class="card"><b>🗓 Tính lịch ôn tập</b><div class="row"><label>Ngày học bài: <input type="date" id="sd" onchange="sp()" style="width:auto"></label></div><div id="so"></div></div>'},i:function(){var d=new Date();document.getElementById('sd').value=d.toISOString().slice(0,10);sp()}},
+{id:'pp6',t:'Phương pháp 6: Feynman và học nhóm',h:function(){return '<h1>Phương pháp 6: Feynman và học nhóm</h1><h2>Kỹ thuật Feynman</h2><ol><li><b>Chọn</b> một khái niệm.</li><li><b>Giải thích</b> bằng lời đơn giản như dạy một người chưa biết gì.</li><li><b>Tìm chỗ vướng:</b> chỗ nào bạn nói không trôi là chỗ bạn chưa hiểu.</li><li><b>Quay lại</b> tài liệu, học lại chỗ đó rồi giải thích lại.</li></ol><h2>Học nhóm hiệu quả</h2><ul><li>Nhóm 3–5 người, mục tiêu rõ cho mỗi buổi.</li><li>Tự làm bài trước, rồi mới thảo luận.</li><li>Thay phiên “làm giảng viên” giải thích cho nhau.</li><li>Giữ nhóm tập trung: đặt thời gian, cất điện thoại.</li></ul>'}},
+{id:'phone',t:'Làm chủ điện thoại và sự tập trung',h:function(){return '<h1>Làm chủ điện thoại và sự tập trung</h1><p>Điện thoại không xấu, vấn đề là thông báo kéo bạn ra khỏi việc đang làm. Mỗi lần ngắt quãng, bạn cần thời gian để lấy lại mạch tập trung.</p><div class="card"><b>Thử thách tuần này</b><div id="ck"></div></div><div class="note">Mẹo: nếu cần điện thoại để học, dùng chế độ “Không làm phiền” và chỉ để lại ứng dụng cần thiết.</div>'},i:function(){var a=['Tắt thông báo mạng xã hội khi học','Để điện thoại ở phòng khác trong 1 phiên Pomodoro','Đặt giới hạn thời gian cho ứng dụng gây xao nhãng','Xóa ứng dụng không cần thiết ra khỏi màn hình chính','Không dùng điện thoại 30 phút trước khi ngủ'];document.getElementById('ck').innerHTML=a.map(function(x,k){return '<label class="todo"><input type="checkbox" onchange="this.nextSibling.style.textDecoration=this.checked?\'line-through\':\'\';if(this.checked)cf()"><span>'+x+'</span></label>'}).join('')}},
+{id:'sv',t:'Chia sẻ từ sinh viên',h:function(){return '<h1>Chia sẻ từ sinh viên</h1><div class="note">Các chia sẻ dưới đây là mẫu. Hãy thay bằng ý kiến thật từ phỏng vấn của nhóm.</div><blockquote>“[Chia sẻ của sinh viên năm nhất về khó khăn lớn nhất]”<br><small>— [Tên, ngành, năm]</small></blockquote><blockquote>“[Chia sẻ của sinh viên năm cuối về phương pháp đã giúp mình]”<br><small>— [Tên, ngành, năm]</small></blockquote><blockquote>“[Chia sẻ về cách giữ động lực]”<br><small>— [Tên, ngành, năm]</small></blockquote>'}},
+{id:'gv',t:'Chia sẻ từ giảng viên',h:function(){return '<h1>Chia sẻ từ giảng viên</h1><div class="note">Các chia sẻ dưới đây là mẫu. Hãy thay bằng ý kiến thật từ phỏng vấn của nhóm.</div><blockquote>“[Lời khuyên của giảng viên về cách học đại học]”<br><small>— [Tên giảng viên, khoa]</small></blockquote><blockquote>“[Sai lầm phổ biến mà giảng viên nhận thấy ở sinh viên]”<br><small>— [Tên giảng viên, khoa]</small></blockquote>'}},
+{id:'kl',t:'Kết luận và thông điệp',h:function(){return '<h1>Kết luận và thông điệp</h1><p>Học đại học là học cách tự học. Không có phương pháp thần kỳ, nhưng có những thói quen nhỏ cộng dồn thành khác biệt lớn.</p><div class="grid"><div class="card">📅 <b>Lên kế hoạch</b><br>cụ thể, vừa sức.</div><div class="card">⏱ <b>Tập trung theo phiên</b><br>Pomodoro.</div><div class="card">📝 <b>Ghi chú thông minh</b><br>Cornell.</div><div class="card">🧠 <b>Nhớ chủ động</b><br>tự kiểm tra, ôn ngắt quãng.</div><div class="card">🗣 <b>Giải thích lại</b><br>Feynman, học nhóm.</div></div><blockquote><b>Thông điệp:</b> Bắt đầu nhỏ. Chọn một phương pháp, thử trong 2 tuần, rồi thêm phương pháp tiếp theo.</blockquote>'},i:function(){cf()}},
+{id:'about',t:'Về nhóm và tài liệu tham khảo',h:function(){return '<h1>Về nhóm và tài liệu tham khảo</h1><div class="card"><b>Thành viên nhóm</b><ul><li>[Họ tên – MSSV – vai trò]</li><li>[Họ tên – MSSV – vai trò]</li><li>[Họ tên – MSSV – vai trò]</li></ul>Giảng viên hướng dẫn: [Tên]<br>Môn học / Trường: [Tên]</div><div class="card"><b>Tài liệu tham khảo</b><ol><li>Dunlosky, J., et al. (2013). Improving students’ learning with effective learning techniques. <i>Psychological Science in the Public Interest</i>, 14(1), 4–58.</li><li>Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning. <i>Psychological Science</i>, 17(3), 249–255.</li><li>Pauk, W. (hệ thống ghi chú Cornell), Đại học Cornell.</li><li>Cirillo, F. (kỹ thuật Pomodoro).</li><li>Ebbinghaus, H. (1885). Über das Gedächtnis (đường cong lãng quên).</li></ol></div>'}}
+];
+var TD=[],cur=25,left=1500,done=0,run=false;
+function cf(){var e=['🎉','⭐','📚','✨','🎓','💡'];for(var k=0;k<22;k++){var s=document.createElement('span');s.className='cf';s.textContent=e[k%e.length];s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(s);setTimeout(function(x){x.remove()},3200,s)}}
+function addT(){var e=document.getElementById('ti');if(e.value.trim()){TD.push({t:e.value.trim(),d:0});e.value='';rT()}}
+function rT(){document.getElementById('tl').innerHTML=TD.map(function(x,k){return '<div class="todo"><input type="checkbox" '+(x.d?'checked':'')+' onchange="TD['+k+'].d=this.checked;rT()">'+(x.d?'<s>':'<span>')+x.t.replace(/</g,'&lt;')+(x.d?'</s>':'</span>')+'<button style="margin-left:auto" onclick="TD.splice('+k+',1);rT()">✕</button></div>'}).join('')||'<p class="note">Chưa có việc nào.</p>'}
+function dT(){var m=document.getElementById('tm');if(m){m.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');m.className='timer'+(run?' go':'');document.getElementById('tc').textContent='Số chu kỳ hoàn thành: '+done}}
+function setT(n){clearInterval(T);run=false;cur=n;left=n*60;dT()}
+function runT(){if(run){clearInterval(T);run=false;dT();return}run=true;dT();T=setInterval(function(){left--;if(left<=0){clearInterval(T);run=false;if(cur==25)done++;left=0;try{navigator.vibrate&&navigator.vibrate(300)}catch(e){}cf();setTimeout(function(){alert('Hết giờ!')},300)}dT()},1000)}
+var FC=[['Active recall là gì?','Chủ động nhớ lại thông tin mà không nhìn tài liệu.'],['Chu kỳ Pomodoro chuẩn?','25 phút học, 5 phút nghỉ; sau 4 chu kỳ nghỉ dài.'],['3 vùng của ghi chú Cornell?','Gợi ý, ghi chú, tóm tắt.'],['Các mốc ôn ngắt quãng phổ biến?','Sau 1, 3, 7, 14, 30 ngày.'],['Bước đầu của kỹ thuật Feynman?','Chọn khái niệm rồi giải thích bằng lời đơn giản.'],['Vì sao đọc lại ít hiệu quả?','Tạo cảm giác quen thuộc nhưng không rèn khả năng truy xuất.']],fi=0,fb=false;
+function sF(){var c=document.getElementById('fc');c.textContent=FC[fi][fb?1:0];c.classList.remove('fl');void c.offsetWidth;c.classList.add('fl');document.getElementById('fn').textContent=(fi+1)+'/'+FC.length}
+function flip(){fb=!fb;sF()}function nx(d){fi=(fi+d+FC.length)%FC.length;fb=false;sF()}
+function sp(){var v=document.getElementById('sd').value;if(!v)return;var h='<div class="tw"><table><tr><th>Lần ôn</th><th>Ngày</th></tr>';[1,3,7,14,30].forEach(function(n,k){var d=new Date(v+'T00:00:00');d.setDate(d.getDate()+n);h+='<tr><td>Lần '+(k+1)+' (+'+n+' ngày)</td><td>'+d.toLocaleDateString('vi-VN',{weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'})+'</td></tr>'});document.getElementById('so').innerHTML=h+'</table></div>'}
+function go(){clearInterval(T);run=false;var id=(location.hash.replace('#/','')||'home'),k=P.findIndex(function(p){return p.id==id});if(k<0)k=0;var p=P[k];
+document.getElementById('nav').innerHTML=P.map(function(q){return '<a href="#/'+q.id+'" class="'+(q.id==p.id?'on':'')+'">'+q.t+'</a>'}).join('');
+document.getElementById('nav').classList.remove('open');
+var pr=P[k-1],nt=P[k+1],m=document.getElementById('m');
+m.style.animation='none';void m.offsetWidth;m.style.animation='';
+m.innerHTML=ban(p.id)+p.h()+'<div class="pn">'+(pr?'<a class="btn" href="#/'+pr.id+'">← '+pr.t+'</a>':'<span></span>')+(nt?'<a class="btn p" style="background:var(--pri);color:#fff" href="#/'+nt.id+'">'+nt.t+' →</a>':'')+'</div>';
+document.getElementById('pg').style.width=((k+1)/P.length*100)+'%';document.title=p.t+' · Học đại học hiệu quả';
+if(p.i)p.i();scrollTo(0,0)}
+addEventListener('hashchange',go);go();
+</script>
+</body>
+</html>
